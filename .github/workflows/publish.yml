@@ -1,4 +1,4 @@
-name: NuGet Publish
+name: Publish NuGet Package
 
 on:
   push:
@@ -25,7 +25,10 @@ jobs:
       
       - name: Extract version from tag
         id: get_version
-        run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+        run: |
+          VERSION=${GITHUB_REF#refs/tags/v}
+          echo "Extracted version: $VERSION"
+          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
       
       - name: Build and pack
         run: |
