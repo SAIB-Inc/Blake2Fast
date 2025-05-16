@@ -1,8 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<VersionPrefix>3.0.0</VersionPrefix>
-		<TargetFrameworks>net8.0;net6.0;netstandard2.0;netstandard2.1;net46</TargetFrameworks>
+		<VersionPrefix>3.0.1</VersionPrefix>
+		<TargetFrameworks>net9.0;net8.0;net6.0;netstandard2.0;netstandard2.1;net46</TargetFrameworks>
+		<PackageId>SAIB.Blake2Fast</PackageId>
+		<Authors>SolarianKnight</Authors>
+		<Description>High-performance BLAKE2 and BLAKE3 cryptographic hash functions for .NET</Description>
+		<PackageReadmeFile>readme.md</PackageReadmeFile>
+		<PackageLicenseExpression>CC0-1.0</PackageLicenseExpression>
+		<RepositoryUrl>https://github.com/SAIB-Inc/Blake2Fast</RepositoryUrl>
+		<PackageTags>blake2;blake3;hash;crypto;cryptography;hmac</PackageTags>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -23,6 +30,7 @@
 
 	<ItemGroup>
 		<None Include="Package\build\*" Pack="true" PackagePath="build/netcoreapp2.1/;buildTransitive/netcoreapp2.1/" />
+		<None Include="readme.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 
 	<ItemGroup>
