@@ -32,8 +32,9 @@ jobs:
       
       - name: Build and pack
         run: |
-          dotnet build src/Blake2Fast/Blake2Fast.csproj -c Release -p:PackageId=SAIB.Blake2Fast -p:Version=${{ steps.get_version.outputs.VERSION }}
-          dotnet pack src/Blake2Fast/Blake2Fast.csproj -c Release -p:PackageId=SAIB.Blake2Fast -p:Version=${{ steps.get_version.outputs.VERSION }} --output nuget-packages
+          # We don't need to specify PackageId here as it's in the project file
+          dotnet build src/Blake2Fast/Blake2Fast.csproj -c Release -p:Version=${{ steps.get_version.outputs.VERSION }}
+          dotnet pack src/Blake2Fast/Blake2Fast.csproj -c Release -p:Version=${{ steps.get_version.outputs.VERSION }} --output nuget-packages
       
       - name: Run tests
         run: dotnet test tests/Blake.Test -c Release
