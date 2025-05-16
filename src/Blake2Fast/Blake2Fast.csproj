@@ -10,6 +10,9 @@
 		<PackageLicenseExpression>CC0-1.0</PackageLicenseExpression>
 		<RepositoryUrl>https://github.com/SAIB-Inc/Blake2Fast</RepositoryUrl>
 		<PackageTags>blake2;blake3;hash;crypto;cryptography;hmac</PackageTags>
+		<!-- Explicitly remove the package icon to override inherited properties -->
+		<PackageIcon></PackageIcon>
+		<Owners>SAIB</Owners>
 	</PropertyGroup>
 
 	<PropertyGroup>
